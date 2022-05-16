@@ -25,6 +25,8 @@ import com.android.settings.development.OverlayCategoryPreferenceController;
 import com.android.settings.display.BrightnessLevelPreferenceController;
 import com.android.settings.display.CameraGesturePreferenceController;
 import com.android.settings.display.LiftToWakePreferenceController;
+import com.android.settings.display.MaxRefreshRatePreferenceController;
+import com.android.settings.display.MinRefreshRatePreferenceController;
 import com.android.settings.display.ScreenSaverPreferenceController;
 import com.android.settings.display.ShowOperatorNamePreferenceController;
 import com.android.settings.display.TapToWakePreferenceController;
@@ -87,6 +89,8 @@ public class DisplaySettings extends DashboardFragment {
                 "android.theme.customization.font"));
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.icon_pack"));
+        controllers.add(new MinRefreshRatePreferenceController(context, lifecycle));
+        controllers.add(new MaxRefreshRatePreferenceController(context, lifecycle));
         return controllers;
     }
 
