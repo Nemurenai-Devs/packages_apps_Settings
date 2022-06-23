@@ -47,6 +47,7 @@ android_library {
     srcs: [
         "src/**/*.java",
         "YASP/src/**/*.java",
+	"src/**/*.kt",
     ],
 
     resource_dirs: [
